@@ -1,2 +1,0 @@
-# Qualtya-
-Proyecto literarii

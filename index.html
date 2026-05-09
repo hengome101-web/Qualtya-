@@ -1,20 +1,25 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
     <title>Qualtya</title>
+
     <link rel="stylesheet" href="style.css">
+
+    <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js')
+                .then(() => console.log('Modo offline activo'))
+                .catch(err => console.log('SW error', err));
+        }
+    </script>
 </head>
 
-<script>
-if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('sw.js')
-    .then(() => console.log('Modo offline activo'))
-    .catch(err => console.log('SW error', err));
-}
-</script>
-
 <body>
+
 <div class="container">
 
     <!-- Banner -->
@@ -26,7 +31,7 @@ if ('serviceWorker' in navigator) {
 
         <div class="hero-content">
             <img src="Avatar.png" alt="Avatar Logo" class="hero-avatar">
-            <img src="Nombre.png" alt="Qualtya" class="hero-logo">
+            <img src="Nombre.png" alt="Qualtya Logo" class="hero-logo">
         </div>
     </div>
 
@@ -43,164 +48,295 @@ if ('serviceWorker' in navigator) {
         </nav>
     </section>
 
+    <!-- Publicidad -->
     <section class="ads-section" style="margin-top: 10px; text-align: center;">
-  <div class="ad">
 
-    <a href="https://www.amazon.com/-/es/Higo-G%C3%B3mez-ebook/dp/B0FQ3D93CQ/ref=sr_1_9?__mk_es_US=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=3BT7F0UO7NTYU&dib=eyJ2IjoiMSJ9.Sd6n0bveyl72_D8a1OvfnmB9FaHJqy38UktZ4UYOaB471YTNtygX2L5qI0CXYVkAVaVLL9rjrkbKjCnh7RpcEb22sAJzUl7V4Y_qZRq0hmoOKx59C35qtaoNlRyesi-zrrpbIctxsZ7dGaxzvPdOn9B2TFb7DZSVEGurZfmvg6b5QGPAWU5auKsQvddi4kz8yJj9poZM2MuWct9DBRKDW400YlbvUvoIsm3hzJQaQEY.ORzOzCshBeBlcVLaAFzRFYb8Yesyssx32hZNJOoodpo&dib_tag=se&keywords=La+fuerza+del+alma&qid=1769298854&sprefix=la+fuerza+del+alma%2Caps%2C2606&sr=8-9" target="_blank">
-      <img src="Sensibilidad.jpg" alt="La fuerza del alma - Higo Gómez" style="display:block; margin: 0 auto; width:200px; height:auto; border-radius:8px;">
-    </a>
-      <h4>La Fuerza del Alma — eBook</h4>
-  </div>
+        <div class="ad">
+
+            <a href="https://www.amazon.com/-/es/Higo-G%C3%B3mez-ebook/dp/B0FQ3D93CQ/"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                <img src="Sensibilidad.jpg"
+                     alt="La fuerza del alma - Higo Gómez"
+                     style="display:block; margin:0 auto; width:200px; height:auto; border-radius:8px;">
+            </a>
+
+            <h4>La Fuerza del Alma — eBook</h4>
+
+        </div>
+
     </section>
-    
+
     <p>
         En esta página desarrollaremos el mundo de donde nacen Jafe y sus amigos.
         Aquí podrás explorar historias, personajes y aventuras que forman parte
         de este universo único.
     </p>
 
-<section id="characters">
-    <h2 class="section-title">Personaje destacado</h2>
-    
-    <div class="character-card">
-        <img src="Personaje1.jpg" alt="Jafe explorando Qualtya" style="display:block; margin: 0 auto; width:200px; height:auto; border-radius:8px;"
-        
-        <h3 class="character-name">Jafe Ali</h3>
-        
-        <p class="character-title">
-            Apodo / título: <strong>“El guardián del silencio que aprendió a moverse en el caos”</strong>
-        </p>
-        
-        <div class="character-bio">
-            
-            <p><strong>Edad</strong></p>
-            <p>Inicio de la historia: 4 años<br>
-                Edad actual: 17 años</p>
-            
-            <p><strong>Género:</strong> Masculino</p>
-            
-            <p><strong>Rol narrativo:</strong><br>
-                Protagonista sensible que encarna la memoria del alma y que al crecer se convierte en protector activo de aquello que siente.
+    <!-- Personajes -->
+    <section id="characters">
+
+        <h2 class="section-title">Personaje destacado</h2>
+
+        <div class="character-card">
+
+            <img src="Personaje1.jpg"
+                 alt="Jafe explorando Qualtya"
+                 style="display:block; margin:0 auto; width:200px; height:auto; border-radius:8px;">
+
+            <h3 class="character-name">Jafe Ali</h3>
+
+            <p class="character-title">
+                Apodo / título:
+                <strong>
+                    “El guardián del silencio que aprendió a moverse en el caos”
+                </strong>
             </p>
-            
-            <p><strong>Ocupación:</strong> Cadete mensajero del ejército</p>
-            
-            <h4 class="bio-subtitle">Personalidad</h4>
-            <p>
-                Jafe es reservado, empático y profundamente perceptivo. Desde niño aprendió a escuchar más de lo que habla, a leer gestos,
-                silencios y emociones no dichas.
-            </p>
-            
-            <p>
-                No es impulsivo; actúa con calma incluso en situaciones extremas. Prioriza la seguridad y el bienestar de otros,
-                no por heroísmo grandilocuente, sino por la conexión emocional que siente con cada vida cercana.
-            </p>
-            
-            <h4 class="bio-subtitle">Habilidades y dones sensibles</h4>
-            <p>
-                <strong>Don principal:</strong> Magnetismo sensible. Capacidad limitada de manipular fuerzas magnéticas cuando su emoción
-                está enfocada.
-            </p>
-            
-            <h4 class="bio-subtitle">Historia</h4>
-            <p>
-                Jafe nace en una familia humilde dentro de la antigua Casa Ali, portadora de sensibilidades olvidadas...
-            </p>
-            
-            <h4 class="bio-subtitle">Arquetipo final</h4>
-            <p class="character-quote">
-                “El niño que guardó la memoria del alma y aprendió a caminar entre la guerra sin perderla.”
-            </p>
-            
+
+            <div class="character-bio">
+
+                <p><strong>Edad</strong></p>
+
+                <p>
+                    Inicio de la historia: 4 años<br>
+                    Edad actual: 17 años
+                </p>
+
+                <p><strong>Género:</strong> Masculino</p>
+
+                <p>
+                    <strong>Rol narrativo:</strong><br>
+                    Protagonista sensible que encarna la memoria del alma y que al crecer
+                    se convierte en protector activo de aquello que siente.
+                </p>
+
+                <p><strong>Ocupación:</strong> Cadete mensajero del ejército</p>
+
+                <h4 class="bio-subtitle">Personalidad</h4>
+
+                <p>
+                    Jafe es reservado, empático y profundamente perceptivo.
+                    Desde niño aprendió a escuchar más de lo que habla,
+                    a leer gestos, silencios y emociones no dichas.
+                </p>
+
+                <p>
+                    No es impulsivo; actúa con calma incluso en situaciones extremas.
+                    Prioriza la seguridad y el bienestar de otros,
+                    no por heroísmo grandilocuente,
+                    sino por la conexión emocional que siente con cada vida cercana.
+                </p>
+
+                <h4 class="bio-subtitle">Habilidades y dones sensibles</h4>
+
+                <p>
+                    <strong>Don principal:</strong>
+                    Magnetismo sensible.
+                    Capacidad limitada de manipular fuerzas magnéticas
+                    cuando su emoción está enfocada.
+                </p>
+
+                <h4 class="bio-subtitle">Historia</h4>
+
+                <p>
+                    Jafe nace en una familia humilde dentro de la antigua Casa Ali,
+                    portadora de sensibilidades olvidadas...
+                </p>
+
+                <h4 class="bio-subtitle">Arquetipo final</h4>
+
+                <p class="character-quote">
+                    “El niño que guardó la memoria del alma y aprendió a caminar entre la guerra sin perderla.”
+                </p>
+
+            </div>
+
         </div>
-    </div>
-</section>
 
-<section id="animations">
-    <h2>Galería de Animaciones</h2>
-    <div class="gallery">
-        <a href="personaje1.html"><img src="personaje1.jpeg"></a>
-        <a href="personaje2.html"><img src="personaje2.jpeg"></a>
-        <a href="personaje3.html"><img src="personaje3.jpeg"></a>
-    </div>
-</section>
+    </section>
 
-<section id="lore">
-  <h2>Lore</h2>
-  <div class="lore-audio">
-    <p class="lore-title">Prólogo — El origen de Qualtya</p>
-    <audio controls>
-      <source src="prologo-qualtya.mp3" type="audio/mpeg">
-      Tu navegador no soporta audio.
-    </audio>
-  </div>
-</section>
+    <!-- Animaciones -->
+    <section id="animations">
 
-<section id="news"><h2>Noticias</h2></section>
+        <h2>Galería de Animaciones</h2>
 
-<p class="follow-text">
-  Síguenos en las redes. Qualtya vive donde vayas tú.
-</p>
+        <div class="gallery">
 
-<section id="contact"><h2>Contacto</h2></section>
+            <a href="personaje1.html">
+                <img src="personaje1.jpeg" alt="Personaje 1">
+            </a>
 
-<div class="social-buttons">
-    <a class="btn fb" href="https://www.facebook.com/alfomdecocle">Facebook</a>
-    <a class="btn yt" href="https://www.youtube.com/@Hig0-s">YouTube</a>
-    <a class="btn ig" href="https://www.instagram.com/alfomdecocle?igsh=MTNqOXV3empkanQ5MA==">Instagram</a>
+            <a href="personaje2.html">
+                <img src="personaje2.jpeg" alt="Personaje 2">
+            </a>
+
+            <a href="personaje3.html">
+                <img src="personaje3.jpeg" alt="Personaje 3">
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Lore -->
+    <section id="lore">
+
+        <h2>Lore</h2>
+
+        <div class="lore-audio">
+
+            <p class="lore-title">
+                Prólogo — El origen de Qualtya
+            </p>
+
+            <audio controls>
+                <source src="prologo-qualtya.mp3" type="audio/mpeg">
+                Tu navegador no soporta audio.
+            </audio>
+
+        </div>
+
+    </section>
+
+    <!-- Noticias -->
+    <section id="news">
+
+        <h2>Noticias</h2>
+
+        <p>Próximamente...</p>
+
+    </section>
+
+    <!-- Contacto -->
+    <p class="follow-text">
+        Síguenos en las redes. Qualtya vive donde vayas tú.
+    </p>
+
+    <section id="contact">
+
+        <h2>Contacto</h2>
+
+        <div class="social-buttons">
+
+            <a class="btn fb"
+               href="https://www.facebook.com/alfomdecocle"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Facebook
+            </a>
+
+            <a class="btn yt"
+               href="https://www.youtube.com/@Hig0-s"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                YouTube
+            </a>
+
+            <a class="btn ig"
+               href="https://www.instagram.com/alfomdecocle"
+               target="_blank"
+               rel="noopener noreferrer">
+
+                Instagram
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- Snake -->
+    <section id="snake-game">
+
+        <h2>Snake</h2>
+
+        <canvas id="snakeCanvas" width="400" height="400"></canvas>
+
+        <div class="game-controls">
+
+            <button id="startBtn">Jugar</button>
+
+            <button id="stopBtn">Detener</button>
+
+            <button id="upBtn" aria-label="Mover arriba">⬆️</button>
+
+            <button id="leftBtn" aria-label="Mover izquierda">⬅️</button>
+
+            <button id="downBtn" aria-label="Mover abajo">⬇️</button>
+
+            <button id="rightBtn" aria-label="Mover derecha">➡️</button>
+
+        </div>
+
+    </section>
+
+    <!-- Scripts -->
+    <script src="game.js"></script>
+
+    <script>
+
+        const startBtn = document.getElementById("startBtn");
+        const stopBtn = document.getElementById("stopBtn");
+
+        const upBtn = document.getElementById("upBtn");
+        const downBtn = document.getElementById("downBtn");
+        const leftBtn = document.getElementById("leftBtn");
+        const rightBtn = document.getElementById("rightBtn");
+
+        startBtn.addEventListener("click", () => {
+            if (window.SnakeGame) {
+                SnakeGame.start();
+            }
+        });
+
+        stopBtn.addEventListener("click", () => {
+            if (window.SnakeGame) {
+                SnakeGame.stop();
+            }
+        });
+
+        upBtn.addEventListener("click", () => {
+            if (window.SnakeGame && SnakeGame.direction?.y === 0) {
+                SnakeGame.direction = { x: 0, y: -1 };
+            }
+        });
+
+        downBtn.addEventListener("click", () => {
+            if (window.SnakeGame && SnakeGame.direction?.y === 0) {
+                SnakeGame.direction = { x: 0, y: 1 };
+            }
+        });
+
+        leftBtn.addEventListener("click", () => {
+            if (window.SnakeGame && SnakeGame.direction?.x === 0) {
+                SnakeGame.direction = { x: -1, y: 0 };
+            }
+        });
+
+        rightBtn.addEventListener("click", () => {
+            if (window.SnakeGame && SnakeGame.direction?.x === 0) {
+                SnakeGame.direction = { x: 1, y: 0 };
+            }
+        });
+
+    </script>
+
+    <!-- Footer -->
+    <footer>
+
+        <p>
+            Lo que aprieta el alma, la mano no lo puede soltar.
+        </p>
+
+        <p>
+            © 2025 Universo Qualtya
+        </p>
+
+    </footer>
+
 </div>
 
-<!-- ===== SNAKE GAME ===== -->
-<section id="snake-game">
-  <h2>Snake</h2>
-
-  <!-- Canvas responsive -->
-  <canvas id="snakeCanvas" width="400" height="400"></canvas>
-
-  <!-- Contenedor de botones ergonómico -->
-  <div class="game-controls">
-    <button id="startBtn">Jugar</button>
-    <button id="stopBtn">Detener</button>
-    <button id="upBtn">⬆️</button>
-    <button id="leftBtn">⬅️</button>
-    <button id="downBtn">⬇️</button>
-    <button id="rightBtn">➡️</button>
-  </div>
-</section>
-
-<script src="game.js"></script>
-
-<script>
-  // Botones funcionales
-  const startBtn = document.getElementById("startBtn");
-  const stopBtn = document.getElementById("stopBtn");
-  const upBtn = document.getElementById("upBtn");
-  const downBtn = document.getElementById("downBtn");
-  const leftBtn = document.getElementById("leftBtn");
-  const rightBtn = document.getElementById("rightBtn");
-
-  startBtn.addEventListener("click", () => SnakeGame.start());
-  stopBtn.addEventListener("click", () => SnakeGame.stop());
-
-  upBtn.addEventListener("click", () => {
-    if (SnakeGame.direction?.y === 0) SnakeGame.direction = { x: 0, y: -1 };
-  });
-  downBtn.addEventListener("click", () => {
-    if (SnakeGame.direction?.y === 0) SnakeGame.direction = { x: 0, y: 1 };
-  });
-  leftBtn.addEventListener("click", () => {
-    if (SnakeGame.direction?.x === 0) SnakeGame.direction = { x: -1, y: 0 };
-  });
-  rightBtn.addEventListener("click", () => {
-    if (SnakeGame.direction?.x === 0) SnakeGame.direction = { x: 1, y: 0 };
-  });
-</script>
-    
-<footer>
-    <p>Lo que aprieta el alma, la mano no lo puede soltar.</p>
-    <p>© 2025 Universo Qualtya</p>
-</footer>
-
-</div>
 </body>
-    </html>
+</html>
